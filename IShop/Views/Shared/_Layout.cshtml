@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/css/style.css" />
+    <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <![endif]-->
+    <script src="~/js/functions.js"></script>
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jqueryui/jquery-ui.min.js"></script>
+    <script src="~/lib/jquery-cookie/jquery.cookie.min.js"></script>
+
+    <script src="~/js/workscripts.js"></script>
+    <script type="text/javascript">var query = 'view=hits';</script>
+    <!-- Fancybox -->
+    <script src="~/lib/fancybox/jquery.mousewheel.min.js"></script>
+    <script src="~/lib/fancybox/jquery.fancybox.min.js"></script>
+    <link href="~/lib/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <!-- Fancybox -->
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <a href="/"><img class="logo" src="~/images/logo.jpg" alt="Интернет магазин сотовых телефонов" /></a>
+            <img class="slogan" src="~/images/slogan.jpg" alt="Интернет-магазин Сотовых телефонов" />
+            <div class="head-contact">
+                <p>
+                    <strong>Телефон:</strong><br />
+                    <span>8 (800) 700-00-01</span>
+                </p>
+                <p>
+                    <strong>Режим работы:</strong><br />
+                    Будние дни: с 9:00 до 18:00<br />
+                    Суббота, Воскресенье - выходные
+                </p>
+            </div>
+            <form method="get">
+                <ul class="search-head">
+                    <input type="hidden" name="view" value="search" />
+                    <li><input type="text" name="search" id="quickquery" placeholder="Что вы хотите купить?" /></li>
+                    <script type="text/javascript">
+					 //<![CDATA[
+					  placeholderSetup('quickquery');
+					  //]]>
+                    </script>
+                    <li><input class="search-btn" type="image" src="~/images/searc-btn.jpg" /></li>
+                </ul>
+            </form>
+        </div>
+        <partial name="_Navigation" />
+        <div id="contentwrapper">
+            <div id="left-bar">
+                <partial name="_LeftBar" />
+            </div>
+        <div id="content">
+                @RenderBody()
+            </div>
+            <div id="right-bar">
+                <partial name="_RightBar" />
+            </div>
+        </div>
+
+
+
+
+        <div class="clr"></div>
+        <div class="footer">
+            <div class="flogo">
+                <a href="/"><img src="~/images/footer-logo.png" alt="Интернет магазин сотовых телефонов" /></a>
+                <p>Сopyright © 2012</p>
+            </div>
+            <div class="fphone">
+                <h2>Телефон:</h2>
+                <h1>8 (800) 700-00-01</h1>
+
+                <h2>Режим работы:</h2>
+                <p>
+                    Будние дни: с 9:00 до 18:00<br />
+                    Суббота, Воскресенье - выходные
+                </p>
+            </div>
+            <div class="fmenu">
+                <p>Меню:</p>
+                <ul>
+                    <li><a href="http://localhost/ishop/">Главная</a></li>
+                    <li><a href="?view=page&amp;page_id=1">О магазине</a></li>
+                    <li><a href="?view=page&amp;page_id=2">Оплата и доставка</a></li>
+                    <li><a href="?view=page&amp;page_id=3">Покупка в кредит</a></li>
+                    <li><a href="?view=page&amp;page_id=4">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

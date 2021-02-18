@@ -1,0 +1,118 @@
+﻿<div class="left-bar-cont">
+    <h2>Каталог</h2>
+    <h3 class="nav-new"><a href="?view=new">Новинки</a></h3>
+    <h3 class="nav-lider"><a href="?view=hits">Лидеры продаж</a></h3>
+    <h3 class="nav-sale"><a href="?view=sale">Распродажа</a></h3>
+    <!-- Меню категорий -->
+    <h4>- Мобильные телефоны</h4>
+    <ul class="nav-catalog">
+        <li>
+            <h3 class="caret">Alcatel</h3>
+            <ul class="nested">
+                <li>- <a href="?view=cat&amp;category=1">Все модели</a></li>
+                <li>- <a href="?view=cat&amp;category=6">Раскладушки</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3><a href="?view=cat&amp;category=2">Ericsson</a></h3>
+        </li>
+        <li>
+            <h3 class="caret">LG</h3>
+            <ul class="nested">
+                <li>- <a href="?view=cat&amp;category=3">Все модели</a></li>
+                <li>- <a href="?view=cat&amp;category=7">Моноблок</a></li>
+                <li>- <a href="?view=cat&amp;category=19">Раскладушки</a></li>
+                <li>- <a href="?view=cat&amp;category=5">Сенсоры</a></li>
+                <li>- <a href="?view=cat&amp;category=4">Слайдеры</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3><a href="?view=cat&amp;category=9">Motorola</a></h3>
+        </li>
+        <li>
+            <h3><a href="?view=cat&amp;category=10">NEC</a></h3>
+        </li>
+        <li>
+            <h3 class="caret">Nokia</h3>
+            <ul class="nested">
+                <li>- <a href="?view=cat&amp;category=11">Все модели</a></li>
+                <li>- <a href="?view=cat&amp;category=13">2 SIM-карты</a></li>
+                <li>- <a href="?view=cat&amp;category=14">Моноблок</a></li>
+            </ul>
+        </li>
+        <li>
+            <h3 class="caret"><a href="?view=cat&amp;category=12">Panasonic</a></h3>
+        </li>
+        <li>
+            <h3 class="caret">Samsung</h3>
+            <ul class="nested">
+                <li>- <a href="?view=cat&amp;category=8">Все модели</a></li>
+                <li>- <a href="?view=cat&amp;category=21">Моноблок</a></li>
+                <li>- <a href="?view=cat&amp;category=20">Тестовая</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                console.log("clicked: " + i);
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+    <!-- Меню категорий -->
+    <div class="bar-contact">
+        <h3>Контакты:</h3>
+        <p>
+            <strong>Телефон:</strong><br />
+            <span>8 (800) 700-00-01</span>
+        </p>
+
+        <p>
+            <strong>Режим работы:</strong><br />
+            Будние дни: <br />
+            с 9:00 до 18:00<br />
+            Суббота, Воскресенье:<br />
+            выходные
+        </p>
+    </div>
+    <div class="news">
+        <h3>Новости</h3>
+        <p>
+            <span>2013-01-24</span>
+            <a href="?view=news&amp;news_id=4">Новая Nokia Lumia</a>
+        </p>
+        <p>
+            <span>2012-10-22</span>
+            <a href="?view=news&amp;news_id=3">Скоро в продаже iPhone 5</a>
+        </p>
+        <a href="?view=archive" class="news-arh">Архив новостей</a>
+    </div> <!-- .news -->
+    <!-- Информеры -->
+    <div class="info">
+        <h3>Доставка</h3>
+        <p>- <a href="?view=informer&amp;informer_id=6">Почта России</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=7">Курьерская служба</a></p>
+    </div> <!-- .info -->
+    <div class="info">
+        <h3>Способы оплаты</h3>
+        <p>- <a href="?view=informer&amp;informer_id=1">Наличный расчет</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=2">Пластиковой картой</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=5">Безналичный расчет</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=4">Рассчитать кредит</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=3">Кредит</a></p>
+    </div> <!-- .info -->
+    <div class="info">
+        <h3>Информация для вас</h3>
+        <p>- <a href="?view=informer&amp;informer_id=8">Гарантия</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=9">Как выбрать телефон</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=10">Ремонт и обслуживание</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=11">Акции и новинки</a></p>
+        <p>- <a href="?view=informer&amp;informer_id=12">Условия доставки</a></p>
+    </div> <!-- .info -->
+    <!-- Информеры -->
+</div>

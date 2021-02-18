@@ -1,0 +1,92 @@
+﻿@model IShop.ViewModels.RegisterViewModel
+@{
+    ViewData["Title"] = "Регистрация";
+}
+
+<div class="content-txt">
+    <h2>Регистрация</h2>
+    <form method="post">
+        <div asp-validation-summary="All" class="error"></div>
+        <table class="zakaz-data" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.Login"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.Login" /></td>
+                    <td class="zakaz-prim"></td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.Password"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.Password" /></td>
+                    <td class="zakaz-prim"></td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.ConfirmPassword"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.ConfirmPassword" /></td>
+                    <td class="zakaz-prim"></td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.FIO"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.FIO" /></td>
+                    <td class="zakaz-prim">Пример: Иванов Сергей Александрович</td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.Email"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.Email" /></td>
+                    <td class="zakaz-prim">Пример: test@mail.ru</td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.Phone"></label></td>
+                    <td class="zakaz-inpt"><input asp-for="@Model.Phone" /></td>
+                    <td class="zakaz-prim">Пример: 8 937 999 99 99</td>
+                </tr>
+                <tr>
+                    <td class="zakaz-txt"><label asp-for="@Model.Address"></label></td>
+                    <td class="zakaz-txtarea"><textarea asp-for="@Model.Address"></textarea></td>
+                    <td class="zakaz-prim">Пример: г. Москва, пр. Мира, ул. Петра Великого д.19, кв 51.</td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" name="reg" value="Зарегистрироваться">
+
+
+    </form>
+    
+</div>
+
+@*<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-route-returnUrl="" method="post">
+            <h4>Create a new account.</h4>
+            <hr />
+            
+            <div class="form-group">
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+        <section>
+            <h4>Use another service to register.</h4>
+            <hr />
+            
+        </section>
+    </div>
+</div>*@
+
+<partial name="_ValidationScriptsPartial" />
+

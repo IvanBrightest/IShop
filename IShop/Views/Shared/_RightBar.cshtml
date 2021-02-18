@@ -1,0 +1,46 @@
+﻿<div class="right-bar-cont">
+    <div class="enter">
+        <h2>Авторизация</h2>
+        <vc:auth></vc:auth>
+    </div> <!-- .enter -->
+    <div class="basket">
+        <h2>Корзина</h2>
+        <div>
+            <p>
+                Корзина пуста
+            </p>
+        </div>
+    </div> <!-- .basket -->
+    <div class="share-search">
+        <h2>Выбор по параметрам</h2>
+        <div>
+            <form method="get">
+                <input type="hidden" name="view" value="filter" />
+                <p>Стоимость:</p>
+                от <input class="podbor-price" type="text" name="startprice" value="" />
+                до <input class="podbor-price" type="text" name="endprice" value="" />
+                руб.
+                <br /><br />
+                <p>Производители:</p>
+                <input type="checkbox" name="brand[]" value="1" id="1" />
+                <label for="1">Alcatel</label> <br />
+                <input type="checkbox" name="brand[]" value="2" id="2" />
+                <label for="2">Ericsson</label> <br />
+                <input type="checkbox" name="brand[]" value="3" id="3" />
+                <label for="3">LG</label> <br />
+                <input type="checkbox" name="brand[]" value="9" id="9" />
+                <label for="9">Motorola</label> <br />
+                <input type="checkbox" name="brand[]" value="10" id="10" />
+                <label for="10">NEC</label> <br />
+                <input type="checkbox" name="brand[]" value="11" id="11" />
+                <label for="11">Nokia</label> <br />
+                <input type="checkbox" name="brand[]" value="12" id="12" />
+                <label for="12">Panasonic</label> <br />
+                <input type="checkbox" name="brand[]" value="8" id="8" />
+                <label for="8">Samsung</label> <br />
+
+                <input class="podbor" type="image" src="~/images/podbor.jpg" />
+            </form>
+        </div>
+    </div>
+</div>

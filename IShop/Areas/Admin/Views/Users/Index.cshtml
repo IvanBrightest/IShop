@@ -1,0 +1,28 @@
+﻿@model  IEnumerable<IShop.Areas.Admin.Data.ListCustomersViewModel>
+
+<a href="?view=add_user">
+    <img src="~/images/admin/add_user.jpg" />
+</a>
+<table class="tabl" cellspacing="1">
+    <tr>
+        <th class="number">№</th>
+        <th class="str_name">Имя</th>
+        <th class="str_name">Логин</th>
+        <th class="str_name">mail</th>
+        <th class="str_action">Действие</th>
+    </tr>
+
+@foreach (var customer in @Model)
+{
+<tr>
+    <td>@customer.Id</td>
+    <td class="name_page">@customer.FIO</td>
+    <td class="name_page">@customer.Login</td>
+    <td class="name_page">@customer.Email</td>
+    <td><a href="?view=edit_user&amp;user_id=1" class="edit">изменить</a>&nbsp; | &nbsp;<a href="?view=del_user&amp;user_id=1" class="del">удалить</a></td>
+</tr>
+}
+</table>
+<a href="?view=add_user">
+    <img src="~/images/admin/add_user.jpg" />
+</a>

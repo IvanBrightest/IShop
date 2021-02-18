@@ -1,0 +1,65 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Список страниц</title>
+    <link href="~/admin/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="karkas">
+        <div class="head">
+            <a asp-area="admin"><img src="~/images/admin/logoAdm.jpg" /></a>
+            <p><a asp-area="" target="_blank">На сайт</a> | <a href="?view=edit_user&amp;user_id="></a> | <a href="?do=logout"><strong>Выйти</strong></a></p>
+        </div> <!-- .head -->	<div class="content-main">
+            <p class="new_orders"><a href="?view=orders&amp;status=0">Есть новые заказы (3)</a></p>
+            <div class="leftBar">
+                <ul class="nav-left">
+                    <li><a class='nav-activ' href="http://localhost/ishop/admin/">Основные страницы</a></li>
+                    <li><a href="?view=informers">Информеры</a></li>
+                    <li><a href="?view=brands">Основные категории</a></li>
+
+                    <!-- Аккордеон -->
+                    <ul class="nav-catalog" id="accordion">
+                        <h3><li><a style="font-size: 13px;" href="#">Alcatel</a></li></h3>
+                        <ul>
+                            <li>- <a href="?view=cat&amp;category=1">Все модели</a></li>
+                            <li>- <a href="?view=cat&amp;category=6">Раскладушки</a></li>
+                        </ul>
+                        <li><a href="?view=cat&amp;category=2">Ericsson</a></li>
+                        <h3><li><a style="font-size: 13px;" href="#">LG</a></li></h3>
+                        <ul>
+                            <li>- <a href="?view=cat&amp;category=3">Все модели</a></li>
+                            <li>- <a href="?view=cat&amp;category=7">Моноблок</a></li>
+                            <li>- <a href="?view=cat&amp;category=19">Раскладушки</a></li>
+                            <li>- <a href="?view=cat&amp;category=5">Сенсоры</a></li>
+                            <li>- <a href="?view=cat&amp;category=4">Слайдеры</a></li>
+                        </ul>
+                        <li><a href="?view=cat&amp;category=9">Motorola</a></li>
+                        <li><a href="?view=cat&amp;category=10">NEC</a></li>
+                        <h3><li><a style="font-size: 13px;" href="#">Nokia</a></li></h3>
+                        <ul>
+                            <li>- <a href="?view=cat&amp;category=11">Все модели</a></li>
+                            <li>- <a href="?view=cat&amp;category=13">2 SIM-карты</a></li>
+                            <li>- <a href="?view=cat&amp;category=14">Моноблок</a></li>
+                        </ul>
+                        <li><a href="?view=cat&amp;category=12">Panasonic</a></li>
+                        <h3><li><a style="font-size: 13px;" href="#">Samsung</a></li></h3>
+                        <ul>
+                            <li>- <a href="?view=cat&amp;category=8">Все модели</a></li>
+                            <li>- <a href="?view=cat&amp;category=21">Моноблок</a></li>
+                            <li>- <a href="?view=cat&amp;category=20">Тестовая</a></li>
+                        </ul>
+                    </ul>
+                    <!-- Аккордеон -->
+
+                    <li><a href="?view=news">Новости</a></li>
+                    <li><a href="?view=orders">Заказы</a></li>
+                    <li><a asp-area="Admin" asp-controller="Users">Пользователи</a></li>
+                </ul>
+            </div> <!-- .leftBar --><div class="content">
+                @RenderBody()
+            </div> <!-- .content -->
+            <div class="load"></div> <!-- .load -->
+            <div class="res"></div> <!-- .res -->
+        </div> <!-- .content-main -->
+    </div> <!-- .karkas -->
+</body>
+</html>

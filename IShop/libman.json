@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "defaultDestination": "wwwroot/lib/",
+  "libraries": [
+    {
+      "library": "jquery@3.5.1",
+      "destination": "wwwroot/lib/jquery/",
+      "files": [
+        "jquery.min.js"
+      ]
+    },
+    {
+      "library": "jqueryui@1.12.1",
+      "destination": "wwwroot/lib/jqueryui",
+      "files": [
+        "jquery-ui.min.js"
+      ]
+    },
+    {
+      "library": "jquery-cookie@1.4.1",
+      "destination": "wwwroot/lib/jquery-cookie/",
+      "files": [
+        "jquery.cookie.min.js"
+      ]
+    },
+    {
+      "library": "fancybox@3.5.7",
+      "destination": "wwwroot/lib/fancybox/",
+      "files": [
+        "jquery.fancybox.min.js",
+        "jquery.fancybox.css"
+      ]
+    },
+    {
+      "library": "jquery-mousewheel@3.1.13",
+      "destination": "wwwroot/lib/fancybox/",
+      "files": [
+        "jquery.mousewheel.min.js"
+      ]
+    }
+  ]
+}

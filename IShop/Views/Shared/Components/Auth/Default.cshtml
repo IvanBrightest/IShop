@@ -1,0 +1,25 @@
+﻿@if (User.Identity.IsAuthenticated)
+{
+    <div class="authform" style="display: block;"><p>Добро пожаловать, @User.Identity.Name</p>
+                                                  <form method="post" asp-controller="Account" asp-action="Logout">
+                                                      <input type="submit" value="Выход" />
+                                                  </form>
+    </div>
+}
+else
+{
+    @model IShop.ViewModels.LoginViewModel
+<div class="authform">
+    <form method="post" action="#">
+        <label asp-for="@Model.Login"></label><br />
+        <input asp-for="@Model.Login" id="login" /><br />
+        <label asp-for="@Model.Password"></label><br />
+        <input asp-for="@Model.Password" id="pass" /><br /><br />
+        <input type="submit" name="auth" id="auth" value="Войти" />
+        <p class="link"><a asp-action="Register" asp-controller="Account">Регистрация</a></p>
+    </form>
+    <div class="error" style="display: block;"></div>
+</div>
+
+<script src="~/js/auth.js"></script>
+}
